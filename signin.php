@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="en">
 
-
-<!-- Mirrored from pixner.net/tradez/main/signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Jun 2024 07:34:13 GMT -->
 <head>
     <!-- required meta -->
     <meta charset="UTF-8">
@@ -44,10 +42,10 @@
                 <div class="col-12 col-md-6 col-lg-5 col-xxl-5 offset-xxl-1 text-center ms-xl-auto mx-auto">
                     <div class="sign__content ms-md-5 ms-xxl-0 pt-120 pb-120">
                         <div class="head_part">
-                            <a href="index.html"> <img src="assets/images/logo.png" alt="Logo"></a>
-                            <h5 class="mt-5 mt-lg-6">Login to Your Account</h5>
+                            <a href="index.php"> <img src="assets/images/logo_success.png" width="350px" alt="Logo"></a>
+                            <h5 class="mt-5 mt-lg-6">Login in Here</h5>
                         </div>
-                        <form method="POST" autocomplete="off" id="frmContactus" class="contact__form mt-8 mt-lg-10 text-start">
+                        <form method="POST" action="" autocomplete="off" id="frmContactus" class="contact__form mt-8 mt-lg-10 text-start">
                             <div class="d-flex flex-column gap-5 gap-lg-6 ">
                                 <div class="single-input">
                                     <label class="mb-2 nw1-color" for="lname">User Name</label>
@@ -67,7 +65,7 @@
                                         <input type="checkbox">
                                         <span class="checkmark d-center"></span>
                                     </span>
-                                    Rember me
+                                    Remember me
                                 </label>
                                 <a href="#" class="nw1-color">Forgot Password?</a>
                             </div>
@@ -75,13 +73,8 @@
                                 <button type="submit" class="cmn-btn py-3 px-5 px-lg-6 mt-7 mt-lg-8 w-100 d-center" name="submit" id="submit">Sign In</button>
                             </div>
                         </form>
-                        <span class="or-option d-center w-100 mt-7 mt-lg-8 position-relative z-0"><span class="px-3 nb4-bg">Or sign in with</span></span>
-                        <div class="d-center gap-5 mt-7 mt-lg-8">
-                            <a href="#"><img src="assets/images/google.png" alt="Google logo"></a>
-                           <a href="#"> <img src="assets/images/facebook.png" alt="FB logo"></a>
-                        </div>
                         <div class="mt-8 mt-lg-10">
-                            <p>Don’t have an account? <a href="signup.html">Register Here</a></p>
+                            <p>Don’t have an account? <a href="signup.php">Register Here</a></p>
                         </div>
                     </div>
                 </div>

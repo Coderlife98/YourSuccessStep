@@ -62,7 +62,10 @@
                             <a class="dropdown-item" href="about.php">About Us</a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="business_plan.pdf" download="business_plan.pdf">Business Plan</a>
+                            <a class="dropdown-item" href="./business.php" >Business Plan</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="./gallery.php" >Gallery</a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="contact.php">Contact</a>

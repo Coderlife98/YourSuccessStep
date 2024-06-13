@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="en">
 
-
-<!-- Mirrored from pixner.net/tradez/main/signup.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Jun 2024 07:34:14 GMT -->
 <head>
     <!-- required meta -->
     <meta charset="UTF-8">
@@ -45,7 +43,7 @@
                 <div class="col-12 col-md-6 col-lg-5 col-xxl-5 offset-xxl-1 text-center ms-xl-auto">
                     <div class="sign__content ms-md-5 ms-xxl-0 pt-120 pb-120">
                         <div class="head_part">
-                            <a href="index.html"> <img src="assets/images/logo.png" alt="Logo"></a>
+                            <a href="index.php"> <img src="assets/images/logo_success.png" alt="Logo"></a>
                             <h5 class="mt-5 mt-lg-6">Sign up to Your Account</h5>
                         </div>
                         <form method="POST" autocomplete="off" id="frmContactus" class="contact__form mt-8 mt-lg-10  text-start">
@@ -98,13 +96,8 @@
                                 <button type="submit" class="cmn-btn py-3 px-5 px-lg-6 mt-7 mt-lg-8 w-100 d-center" name="submit" id="submit">Sign Up</button>
                             </div>
                         </form>
-                        <span class="or-option d-center w-100 mt-7 mt-lg-8 position-relative z-0"><span class="px-3 nb4-bg">Or sign in with</span></span>
-                        <div class="d-center gap-5 mt-7 mt-lg-8">
-                            <a href="#"><img src="assets/images/google.png" alt="Google logo"></a>
-                           <a href="#"> <img src="assets/images/facebook.png" alt="FB logo"></a>
-                        </div>
                         <div class="mt-8 mt-lg-10">
-                            <p>Already have an account? <a href="signin.html">Log in</a></p>
+                            <p>Already have an account? <a href="signin.php">Log in</a></p>
                         </div>
                     </div>
                 </div>
