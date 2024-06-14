@@ -67,14 +67,7 @@
                             <span><a href="mailto:support@yssteps.com">support@yssteps.com</a></span>
                            </div>
                         </div>
-                        <div class="d-flex my-3">
-                           <div class="icons pe-3">
-                           <i class="fa-solid fa-phone"></i>
-                           </div>
-                           <div>
-                            <span><a href="">xxxxxxxxxxxx</a></span>
-                           </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

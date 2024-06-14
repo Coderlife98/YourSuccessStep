@@ -9,7 +9,8 @@
     <title>Contact Us</title>
     <?php include ("./includes/link.php"); ?>
 </head>
-<scr>
+
+<body>
     <?php include ("./includes/header.php"); ?>
 
     <!-- banner section start-->
@@ -52,11 +53,7 @@
 support@yssteps.com" class="__cf_email__">
                                         support@yssteps.com</a></span>
                             </div>
-                            <div class="d-flex align-items-center gap-3">
-                                <span class="box_12 p1-bg rounded-circle d-center"><i
-                                        class="ti ti-phone fs-four-up nb4-color"></i></span>
-                                <span class="fs-six-up">xxxxxxxxxxx</span>
-                            </div>
+
                         </div>
                         <div class="submissions">
                             <h3>Our socials media</h3>
@@ -83,7 +80,7 @@ support@yssteps.com" class="__cf_email__">
                             <div class="row gap-3 gap-sm-0">
                                 <div class="col-sm-6">
                                     <div class="single-input">
-                                        <input type="text"  class="fs-six-up p-2" id="name" name="name"
+                                        <input type="text" class="fs-six-up p-2" id="name" name="name"
                                             placeholder="Name" required>
                                     </div>
                                 </div>
@@ -97,8 +94,10 @@ support@yssteps.com" class="__cf_email__">
                             <div class="row gap-3 gap-sm-0 ">
                                 <div class="col-sm-6">
                                     <div class="single-input">
-                                        <input type="text" oninput="this.value = this.value.toUpperCase().replace(/[^0-9]/g, '').replace(/(\  *?)\  */g, '$1')" class="fs-six-up p-2" id="number" name="number"
-                                            maxlength="10" placeholder="Number" required>
+                                        <input type="text"
+                                            oninput="this.value = this.value.toUpperCase().replace(/[^0-9]/g, '').replace(/(\  *?)\  */g, '$1')"
+                                            class="fs-six-up p-2" id="number" name="number" maxlength="10"
+                                            placeholder="Number" required>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -112,9 +111,28 @@ support@yssteps.com" class="__cf_email__">
                                 <textarea class="fs-six-up p-2" name="message" rows="4" placeholder="Message"
                                     id="message" required></textarea>
                             </div>
+                            <div class="col-sm-12 mt-3">
+                                <div class="outer-box">
+                                    <div class="inner-box1 d-flex justify-content-around  align-items-center "
+                                        style="border:0.2px solid white;padding: 8px 10px;">
+                                        <span class="text-white fw-bolder">Enter Captcha:-</span>
+                                        <div class="captcha-box-in d-flex align-items-center ">
+                                            <div class="in-colo">
+                                                <span id="first"></span>
+                                                <span id="plus">+</span>
+                                                <span id="second"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 mt-3">
+                                <input type="text" id="num" placeholder="Enter Captcha Here" class="set-sum p-2"
+                                    onkeyup="myFunction()" />
+                            </div>
                         </div>
                         <span id="msg"></span>
-                        <button type="submit" onclick="return validate()"
+                        <button type="submit" onclick="return validate();"
                             class="cmn-btn py-3 px-5 px-lg-6 mt-8 mt-lg-10 d-flex ms-auto" name="submit"
                             id="submit">Send Message<i class="bi bi-arrow-up-right"></i><span></span></button>
                     </form>
@@ -131,10 +149,25 @@ support@yssteps.com" class="__cf_email__">
     <!-- Contact end -->
 
     <?php include ("./includes/footer.php"); ?>
-    <?php include ("./includes/script.php"); ?>
     <script>
-        function validate() {
 
+        var firstNu = document.getElementById("first");
+        var num1 = (firstNu.innerHTML = Math.floor(Math.random() * 100));
+        console.log("number1", num1);
+        var secNum = document.getElementById("second");
+        var num2 = (secNum.innerHTML = Math.floor(Math.random() * 10));
+        console.log("number2", num2);
+
+
+        function myFunction() {
+            var userInput = document.getElementById("num");
+            var inputValu = userInput.value;
+            return inputValu;
+        }
+
+        var storeRandomValue = parseInt(num1) + parseInt(num2);
+
+        function validate() {
             var name = document.getElementById("name").value;
             var email = document.getElementById("email").value;
             var number = document.getElementById("number").value;
@@ -144,6 +177,7 @@ support@yssteps.com" class="__cf_email__">
             var phoneRegex = /^\d{10}$/;
             var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
+            var dued = myFunction();
             if (!name) {
                 alert("Please Enter Name");
                 return false;
@@ -159,16 +193,28 @@ support@yssteps.com" class="__cf_email__">
             } else if (!number) {
                 alert("Enter Mobile Number");
                 return false;
-            }else if(!phoneRegex.test(number)){
+            } else if (!phoneRegex.test(number)) {
                 alert("Enter Correct Number");
                 return false;
-            }else if(!message){
+            } else if (!message) {
                 alert("Enter Message");
+                return false;
+            } else if (!dued) {
+                alert("Please Enter Captcha");
+                return false;
+            } else if (namePattern.test(dued)) {
+                alert("Enter Only Number");
+                return false;
+            }
+            else if (dued != storeRandomValue) {
+                alert("Enter Correct Captcha");
                 return false;
             }
 
         }
     </script>
-    </s>
+    <?php include ("./includes/script.php"); ?>
+
+</body>
 
 </html>
